@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function enterFavAnimal() {
+                var animalName;
+                animalName = document.getElementById("favoriteAnimal").value;
+                alert(animalName);
+            }
+            
+        </script>
+        <form name="formName" id="formID" action="#" method="get">
+            <p>What is your favorite animal? <input type="text" name="favAnimal" id="favoriteAnimal"></p>
+            
+            <p><input type="button" name="btnGo" id="goButton" value="Go!" onclick="enterFavAnimal();"></p>
+        </form>
+    </body>
+</html>
