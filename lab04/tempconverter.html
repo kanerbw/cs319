@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tempurature Converter</title>
+    </head>
+    <body>
+        
+        <script>
+            function convertToCelsius() {
+                var fTemp;
+                var cTemp;
+                
+                fTemp = document.tempConversion.tempInF.value;
+                parseFloat(fTemp);
+                
+                cTemp = (fTemp - 32) * (5 / 9);
+                document.tempConversion.tempInC.value = cTemp;
+                document.tempConversion.tempInC.style.backgroundColor = "aquamarine";
+                document.tempConversion.tempInF.style.backgroundColor = "white";
+            }
+            
+            function convertToFahrenheit() {
+                var fTemp;
+                var cTemp;
+                
+                cTemp = document.tempConversion.tempInC.value;
+                parseFloat(cTemp);
+                
+                fTemp = (cTemp * (9 / 5)) + 32;
+                document.tempConversion.tempInF.value = fTemp;
+                document.tempConversion.tempInF.style.backgroundColor = "aquamarine";
+                document.tempConversion.tempInC.style.backgroundColor = "white";
+            }
+        </script>
+        
+        <form name="tempConversion" id="tempConversion" action="#" method="get">
+            <h1>Tempurature Converter</h1>
+            <p>Tempurature in Fahrenheit:</p>
+            <p><input type="number" name="tempInF" id="tempInF"></p>
+            <p><input type="button" name="convertToC" id="convertToC" value="F to C" onclick="convertToCelsius();"> <input type="button" name="convertToF" id="convertToF" value="C to F" onclick="convertToFahrenheit();"></p>
+            <p>Tempurature in Celsius:</p>
+            <p><input type="number" name="tempInC" id="tempInC"></p>
+        </form>
+    </body>
+</html>
