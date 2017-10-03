@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function displayMonthName() {
+                var monthName;
+                var monthNumber;
+                
+                monthNumber = document.formName.monthNum.value;
+                
+                if (monthNumber < 1) {
+                    alert("I don't think that number corresponds to a month.");
+                    document.formName.monthNum.focus();
+                    return false;
+                }
+                
+                if (monthNumber > 12) {
+                    alert("I don't think that number corresponds to a month.");
+                    document.formName.monthNum.focus();
+                    return false;
+                }
+                
+                if (monthNumber == 1) {
+                    monthName = "January";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 2) {
+                    monthName = "February";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 3) {
+                    monthName = "March";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 4) {
+                    monthName = "April";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 5) {
+                    monthName = "May";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 6) {
+                    monthName = "June";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 7) {
+                    monthName = "July";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 8) {
+                    monthName = "August";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 9) {
+                    monthName = "September";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 10) {
+                    monthName = "October";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 11) {
+                    monthName = "November";
+                    alert(monthName);
+                    return true;
+                }
+                
+                if (monthNumber == 12) {
+                    monthName = "December";
+                    alert(monthName);
+                    return true;
+                }
+            }
+        </script>
+        <form name="formName" id="formId" action="#" method="get" onsubmit="displayMonthName();">
+            <h1>Months</h1>
+            <p>Month Number: <input type="number" name="monthNum" id="monthNum"></p>
+            <p><input type="submit" name="submitButton" id="submitButton"></p>
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
