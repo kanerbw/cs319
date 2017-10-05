@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tempurature Converter</title>
+    </head>
+    <body>
+        
+        <script>
+            
+            function convert() {
+                if (document.getElementById("fToC").checked == true) {
+                    var fTemp;
+                    var cTemp;
+
+                    fTemp = document.tempConversion.tempInF.value;
+                    parseFloat(fTemp);
+
+                    cTemp = (fTemp - 32) * (5 / 9);
+                    document.tempConversion.tempInC.value = cTemp;
+                    document.tempConversion.tempInC.style.backgroundColor = "aquamarine";
+                    document.tempConversion.tempInF.style.backgroundColor = "white";
+                }
+                
+                if (document.getElementById("cToF").checked) {
+                    var fTemp;
+                    var cTemp;
+
+                    cTemp = document.tempConversion.tempInC.value;
+                    parseFloat(cTemp);
+
+                    fTemp = (cTemp * (9 / 5)) + 32;
+                    document.tempConversion.tempInF.value = fTemp;
+                    document.tempConversion.tempInF.style.backgroundColor = "aquamarine";
+                    document.tempConversion.tempInC.style.backgroundColor = "white";
+                }
+            }
+            
+        </script>
+        
+        <form name="tempConversion" id="tempConversion" action="#" method="get">
+            <h1>Tempurature Converter</h1>
+            <p>Tempurature in Fahrenheit:</p>
+            <p><input type="number" name="tempInF" id="tempInF"></p>
+            <input type="radio" name="tempType" id="fToC" value="fToC">F to C<br>
+            <input type="radio" name="tempType" id="cToF" value="cToF">C to F<br>
+            <p>Tempurature in Celsius:</p>
+            <p><input type="number" name="tempInC" id="tempInC"></p>
+            <p><input type="button" name="btnConvert" id="btnConvert" value="Convert" onclick="convert();"></p>
+        </form>
+    </body>
+</html>

@@ -5,7 +5,7 @@
         <title>Task 1</title>
         <script>
             function formValidate() {
-                alert("The method was called properly");
+                //alert("The method was called properly");
                 
                 var fName = document.validation.firstName.value;
                 var lName = document.validation.lastName.value;
@@ -30,11 +30,11 @@
         </script>
     </head>
     <body>
-        <form name="validation" id="validation" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get">
+        <form name="validation" id="validation" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
             <p>First name: <input type="text" name="firstName" id="firstName"></p>
             <p>Last name: <input type="text" name="lastName" id="lastName"></p>
             <p>Email address: <input type="text" name="emailAddress" id="emailAddress"></p>
-            <p><input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" onsubmit="return formValidate();"></p>
+            <p><input type="submit" name="btnSubmit" id="btnSubmit" value="Submit"></p>
         </form>
     </body>
 </html>
