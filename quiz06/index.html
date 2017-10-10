@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="end">
+    <head>
+        <meta charset="utf-8">
+        <title>Quiz 06</title>
+    </head>
+    <body>
+        <script>
+            function verifyColor(myColor) {
+                alert("this function is being called");
+                var myColor = document.formName.favColor.value;
+                if (isNaN(myColor) == false) {
+                    alert("No numbers, please!");
+                    document.formName.favColor.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        <form name="formName" id="formName" action="#" method="get" onsubmit="return verifyColor();">
+            <p>Favorite Color: <input type="text" name="favColor" id="favColor"></p>
+            <p><input type="submit" name="btnSubmit" id="btnSubmit" value="Submit"></p>
+        </form>
+    </body>
+</html>
