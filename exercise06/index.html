@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 6</title>
+    </head>
+    <body>
+        <script>
+            function playGame() {
+                var magicNumber = 4;
+                var guessNum = document.numGuess.guess.value;
+
+                guessNum.trim();
+
+                if (guessNum == "") {
+                    alert("Please make a guess");
+                    document.numGuess.guess.focus();
+                    return false;
+                } else if (isNaN(guessNum)) {
+                    alert("You may only guess a number");
+                    document.numGuess.guess.select();
+                    return false;
+                } else if (guessNum < 1 || guessNum > 10) {
+                    alert("Please guess a number within the valid range");
+                    document.numGuess.guess.select();
+                    return false;
+                }
+
+                if (guessNum > magicNumber) {
+                    alert("Try a lower number instead");
+                    document.numGuess.guess.select();
+                    return false;
+                } else if (guessNum < magicNumber) {
+                    alert("Try a higher number instead");
+                    document.numGuess.guess.select();
+                    return false;
+                } else {
+                    alert("Correct!");
+                    return true;
+                }
+            }
+        </script>
+        <form name="numGuess" id="numGuess" action="#" method="get" onsubmit="return playGame();">
+            <p>What is your guess? <input type="text" name="guess" id="guess"></p>
+            <p><input type="submit" name="btnSubmit" id="btnSubmit" value="Submit"></p>
+        </form>
+    </body>
+</html>
