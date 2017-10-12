@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Example 2</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <table border="1">
+            
+                <script>
+                    var incrementer = 0;
+                    for (var i = 1; i <= 9; i++) {
+                        document.write("<tr>");
+                        for (var q = 1; q <= 9; q++) {
+                            document.write("<td>" + (q * i) + "</td>");
+                        }
+                        document.write("</tr>");
+                        incrementer++;
+                    }
+                </script>
+        </table>
+    </body>
+</html>
